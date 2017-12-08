@@ -9,7 +9,9 @@ export const insertGraphic = new ValidatedMethod({
   validate: new SimpleSchema({
     name: { type: String },
     link: { type: String },
-    cat: { type: String }
+    cat: { type: String },
+    owner: { type: String },
+    isPublic: { type: Boolean }
   }).validator(),
   run(graphic) {
     return Graphics.insert(graphic);
@@ -27,9 +29,9 @@ rateLimit({
 Meteor.methods({
   getGraphics: (name, categories) => {
     check(name, String);
-    
+
     check(categories, String);
-    
+
 
     // check(categories, [Object]);
     if(name==='none' && categories==='none'){
@@ -43,7 +45,7 @@ Meteor.methods({
         }
       }).fetch();
     }else if(name==='none'){
-    
+
       return Graphics.find({cat:categories}).fetch();
     }else{
       return Graphics.find({
@@ -54,7 +56,7 @@ Meteor.methods({
         cat:categories
       }).fetch();
     }
-    
-    
+
+
   }
 });

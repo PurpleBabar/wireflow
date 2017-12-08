@@ -19,6 +19,7 @@ import { ResetPassword } from '../../ui/pages/reset-password';
 import { Signup } from '../../ui/pages/signup';
 import FlowDesigner from '../../ui/pages/flowdesigner';
 import MyCharts from '../../ui/pages/mycharts';
+import MySvgs from '../../ui/pages/mysvgs';
 import Me from '../../ui/pages/me.js';
 
 const requireAuth = (nextState, replace) => {
@@ -42,6 +43,7 @@ Meteor.startup(() => {
 
         <Route name="room" path="/wire/:id" component={ FlowDesigner } />
         <Route name="charts" path="/mycharts" component={ MyCharts } />
+        <Route name="svgs" path="/mysvgs" component={ MySvgs } />
         <Route name="me" path="/me" component={ Me } />
 
         <Route name="admin" path="admin" component={ AdminLayout }>

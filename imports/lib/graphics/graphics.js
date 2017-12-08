@@ -24,6 +24,14 @@ Graphics.schema = new SimpleSchema({
   },
   link: {
     type: String,
+  },
+  owner: {
+    type: String,
+    default: "root",
+  },
+  isPublic: {
+    type: Boolean,
+    default: true
   }
 });
 

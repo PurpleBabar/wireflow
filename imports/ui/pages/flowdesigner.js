@@ -261,10 +261,13 @@ export class FlowDesigner extends React.Component {
                 </a>
               </li>
               <li className="tab col s2">
-                <a href="http://wireflow.co/mycharts">My charts</a>
+                <a target="_self" href="/mycharts">My charts</a>
               </li>
               <li className="tab col s2">
-                <a target="_self" href="http://wireflow.co/">
+                <a target="_self" href="/mysvgs">My SVGs</a>
+              </li>
+              <li className="tab col s2">
+                <a target="_self" href="/">
                   Homepage
                 </a>
               </li>
